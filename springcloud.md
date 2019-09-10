@@ -20,3 +20,25 @@ Feign
 ## Leadership election and cluseter state 
 
 ## Distributed messaging 分布式消息
+
+
+
+# 分布式基本组成
+
+Provider
+
+Consumer
+
+Registry
+
+Router
+
+Broker(服务代理)
+
+
+
+# 其它
+
+同事推荐 tensorflow中文网
+
+周志华的书，Yoshua Bengio新书《Deep Learning》深度学习(中文）
