@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <PostThreadGroup guiclass="PostThreadGroupGui" testclass="PostThreadGroup" testname="决策树" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">2</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">500</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </PostThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Test" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;request&quot;: {&#xd;
+		&quot;headers&quot;: {&#xd;
+			&quot;api_ID&quot;: &quot;string&quot;,&#xd;
+			&quot;api_Version&quot;: &quot;string&quot;,&#xd;
+			&quot;app_Pub_ID&quot;: &quot;string&quot;,&#xd;
+			&quot;app_Sub_ID&quot;: &quot;string&quot;,&#xd;
+			&quot;app_Token&quot;: &quot;string&quot;,&#xd;
+			&quot;format&quot;: &quot;string&quot;,&#xd;
+			&quot;partner_ID&quot;: &quot;string&quot;,&#xd;
+			&quot;sign&quot;: &quot;string&quot;,&#xd;
+			&quot;sign_Method&quot;: &quot;string&quot;,&#xd;
+			&quot;sys_ID&quot;: &quot;string&quot;,&#xd;
+			&quot;time_Stamp&quot;: &quot;string&quot;,&#xd;
+			&quot;transaction_UUID&quot;: &quot;string&quot;&#xd;
+		},&#xd;
+		&quot;body&quot;: {&#xd;
+			&quot;tag&quot;: &quot;0&quot;,&#xd;
+			&quot;basic_info&quot;: {&#xd;
+				&quot;address&quot;: &quot;&quot;,&#xd;
+				&quot;age&quot;: &quot;65&quot;,&#xd;
+				&quot;birthday&quot;: &quot;&quot;,&#xd;
+				&quot;gender&quot;: &quot;&quot;,&#xd;
+				&quot;blood_type&quot;: &quot;&quot;,&#xd;
+				&quot;marriage&quot;: &quot;&quot;,&#xd;
+				&quot;nationality&quot;: &quot;&quot;,&#xd;
+				&quot;occupation&quot;: &quot;&quot;,&#xd;
+				&quot;eating_habit&quot;: &quot;&quot;,&#xd;
+				&quot;waist&quot;: &quot;&quot;,&#xd;
+				&quot;season&quot;: &quot;&quot;,&#xd;
+				&quot;weather&quot;: &quot;&quot;&#xd;
+			},&#xd;
+			&quot;basic_signs&quot;: {&#xd;
+				&quot;breathe&quot;: &quot;1&quot;,&#xd;
+				&quot;dbp&quot;: &quot;1&quot;,&#xd;
+				&quot;height&quot;: &quot;1&quot;,&#xd;
+				&quot;pulse&quot;: &quot;1&quot;,&#xd;
+				&quot;sbp&quot;: &quot;1&quot;,&#xd;
+				&quot;temperature&quot;: &quot;1&quot;,&#xd;
+				&quot;weight&quot;: &quot;1&quot;&#xd;
+			},&#xd;
+			&quot;signs&quot;: [{&#xd;
+				&quot;type&quot;: &quot;sign&quot;,&#xd;
+				&quot;id&quot;: &quot;000081&quot;,&#xd;
+				&quot;name&quot;: &quot;湿啰音&quot;,&#xd;
+				&quot;existence&quot;: &quot;true&quot;,&#xd;
+				&quot;data&quot;: []&#xd;
+			}],&#xd;
+			&quot;confirmed_symptoms&quot;: [{&#xd;
+					&quot;type&quot;: &quot;symptom&quot;,&#xd;
+					&quot;id&quot;: &quot;000002&quot;,&#xd;
+					&quot;name&quot;: &quot;咽痒&quot;,&#xd;
+					&quot;pid&quot;: &quot;000031&quot;,&#xd;
+					&quot;pname&quot;: &quot;鼻咽部不适&quot;,&#xd;
+					&quot;ischiefcompliant&quot;: &quot;true&quot;,&#xd;
+					&quot;existence&quot;: &quot;true&quot;,&#xd;
+					&quot;description&quot;: &quot;&quot;,&#xd;
+					&quot;emergency&quot;: &quot; &quot;,&#xd;
+					&quot;simultaneous_flag&quot;: &quot;&quot;,&#xd;
+					&quot;data&quot;: []&#xd;
+				},&#xd;
+				{&#xd;
+					&quot;type&quot;: &quot;symptom&quot;,&#xd;
+					&quot;id&quot;: &quot;000008&quot;,&#xd;
+					&quot;name&quot;: &quot;咳痰&quot;,&#xd;
+					&quot;pid&quot;: &quot;&quot;,&#xd;
+					&quot;pname&quot;: &quot;&quot;,&#xd;
+					&quot;ischiefcompliant&quot;: &quot;true&quot;,&#xd;
+					&quot;existence&quot;: &quot;true&quot;,&#xd;
+					&quot;description&quot;: &quot;&quot;,&#xd;
+					&quot;emergency&quot;: &quot; &quot;,&#xd;
+					&quot;simultaneous_flag&quot;: &quot;&quot;,&#xd;
+					&quot;data&quot;: [{&#xd;
+							&quot;name&quot;: &quot;性质&quot;,&#xd;
+							&quot;value_type&quot;: &quot;2&quot;,&#xd;
+							&quot;value_unit&quot;: &quot;&quot;,&#xd;
+							&quot;code&quot;: &quot;010&quot;,&#xd;
+							&quot;detail_code&quot;: &quot;000005&quot;,&#xd;
+							&quot;values&quot;: [{&#xd;
+								&quot;value&quot;: &quot;脓性&quot;,&#xd;
+								&quot;exist&quot;: &quot;true&quot;,&#xd;
+								&quot;code&quot;: &quot;001&quot;,&#xd;
+								&quot;displayname&quot;: &quot;&quot;&#xd;
+							}]&#xd;
+						},&#xd;
+						{&#xd;
+							&quot;name&quot;: &quot;时长&quot;,&#xd;
+							&quot;value_type&quot;: &quot;1&quot;,&#xd;
+							&quot;value_unit&quot;: &quot;月&quot;,&#xd;
+							&quot;code&quot;: &quot;012&quot;,&#xd;
+							&quot;detail_code&quot;: &quot;000007&quot;,&#xd;
+							&quot;values&quot;: [{&#xd;
+								&quot;value&quot;: &quot;2&quot;,&#xd;
+								&quot;exist&quot;: &quot;true&quot;,&#xd;
+								&quot;code&quot;: &quot;001&quot;,&#xd;
+								&quot;displayname&quot;: &quot;&quot;&#xd;
+							}]&#xd;
+						}&#xd;
+					]&#xd;
+				},&#xd;
+				{&#xd;
+					&quot;type&quot;: &quot;symptom&quot;,&#xd;
+					&quot;id&quot;: &quot;000007&quot;,&#xd;
+					&quot;name&quot;: &quot;咳嗽&quot;,&#xd;
+					&quot;pid&quot;: &quot;&quot;,&#xd;
+					&quot;pname&quot;: &quot;&quot;,&#xd;
+					&quot;ischiefcompliant&quot;: &quot;true&quot;,&#xd;
+					&quot;existence&quot;: &quot;true&quot;,&#xd;
+					&quot;description&quot;: &quot;&quot;,&#xd;
+					&quot;emergency&quot;: &quot; &quot;,&#xd;
+					&quot;simultaneous_flag&quot;: &quot;&quot;,&#xd;
+					&quot;data&quot;: [{&#xd;
+						&quot;name&quot;: &quot;时长&quot;,&#xd;
+						&quot;value_type&quot;: &quot;1&quot;,&#xd;
+						&quot;value_unit&quot;: &quot;月&quot;,&#xd;
+						&quot;code&quot;: &quot;012&quot;,&#xd;
+						&quot;detail_code&quot;: &quot;000004&quot;,&#xd;
+						&quot;values&quot;: [{&#xd;
+							&quot;value&quot;: &quot;2&quot;,&#xd;
+							&quot;exist&quot;: &quot;true&quot;,&#xd;
+							&quot;code&quot;: &quot;001&quot;,&#xd;
+							&quot;displayname&quot;: &quot;&quot;&#xd;
+						}]&#xd;
+					}]&#xd;
+				},&#xd;
+				{&#xd;
+					&quot;type&quot;: &quot;symptom&quot;,&#xd;
+					&quot;id&quot;: &quot;000036&quot;,&#xd;
+					&quot;name&quot;: &quot;发热&quot;,&#xd;
+					&quot;pid&quot;: &quot;&quot;,&#xd;
+					&quot;pname&quot;: &quot;&quot;,&#xd;
+					&quot;ischiefcompliant&quot;: &quot;true&quot;,&#xd;
+					&quot;existence&quot;: &quot;true&quot;,&#xd;
+					&quot;description&quot;: &quot;&quot;,&#xd;
+					&quot;emergency&quot;: &quot; &quot;,&#xd;
+					&quot;simultaneous_flag&quot;: &quot;&quot;,&#xd;
+					&quot;data&quot;: [{&#xd;
+						&quot;name&quot;: &quot;严重程度&quot;,&#xd;
+						&quot;value_type&quot;: &quot;2&quot;,&#xd;
+						&quot;value_unit&quot;: &quot;&quot;,&#xd;
+						&quot;code&quot;: &quot;002&quot;,&#xd;
+						&quot;detail_code&quot;: &quot;000001&quot;,&#xd;
+						&quot;values&quot;: [{&#xd;
+							&quot;value&quot;: &quot;非高热&quot;,&#xd;
+							&quot;exist&quot;: &quot;true&quot;,&#xd;
+							&quot;code&quot;: &quot;002&quot;,&#xd;
+							&quot;displayname&quot;: &quot;&quot;&#xd;
+						}]&#xd;
+					}]&#xd;
+				},&#xd;
+				{&#xd;
+					&quot;type&quot;: &quot;symptom&quot;,&#xd;
+					&quot;id&quot;: &quot;000029&quot;,&#xd;
+					&quot;name&quot;: &quot;流涕&quot;,&#xd;
+					&quot;pid&quot;: &quot;000031&quot;,&#xd;
+					&quot;pname&quot;: &quot;鼻咽部不适&quot;,&#xd;
+					&quot;ischiefcompliant&quot;: &quot;true&quot;,&#xd;
+					&quot;existence&quot;: &quot;false&quot;,&#xd;
+					&quot;description&quot;: &quot;&quot;,&#xd;
+					&quot;emergency&quot;: &quot; &quot;,&#xd;
+					&quot;simultaneous_flag&quot;: &quot;&quot;,&#xd;
+					&quot;data&quot;: []&#xd;
+				},&#xd;
+				{&#xd;
+					&quot;type&quot;: &quot;symptom&quot;,&#xd;
+					&quot;id&quot;: &quot;000004&quot;,&#xd;
+					&quot;name&quot;: &quot;咽痛&quot;,&#xd;
+					&quot;pid&quot;: &quot;000031&quot;,&#xd;
+					&quot;pname&quot;: &quot;鼻咽部不适&quot;,&#xd;
+					&quot;ischiefcompliant&quot;: &quot;true&quot;,&#xd;
+					&quot;existence&quot;: &quot;false&quot;,&#xd;
+					&quot;description&quot;: &quot;&quot;,&#xd;
+					&quot;emergency&quot;: &quot; &quot;,&#xd;
+					&quot;simultaneous_flag&quot;: &quot;&quot;,&#xd;
+					&quot;data&quot;: []&#xd;
+				},&#xd;
+				{&#xd;
+					&quot;type&quot;: &quot;symptom&quot;,&#xd;
+					&quot;id&quot;: &quot;000006&quot;,&#xd;
+					&quot;name&quot;: &quot;鼻塞&quot;,&#xd;
+					&quot;pid&quot;: &quot;000031&quot;,&#xd;
+					&quot;pname&quot;: &quot;鼻咽部不适&quot;,&#xd;
+					&quot;ischiefcompliant&quot;: &quot;true&quot;,&#xd;
+					&quot;existence&quot;: &quot;false&quot;,&#xd;
+					&quot;description&quot;: &quot;&quot;,&#xd;
+					&quot;emergency&quot;: &quot; &quot;,&#xd;
+					&quot;simultaneous_flag&quot;: &quot;&quot;,&#xd;
+					&quot;data&quot;: []&#xd;
+				}&#xd;
+			],&#xd;
+			&quot;medical_history&quot;: {&#xd;
+				&quot;prior_history&quot;: {&#xd;
+					&quot;existence&quot;: &quot;true&quot;,&#xd;
+					&quot;data&quot;: [{&#xd;
+						&quot;value_name&quot;: &quot;疾病&quot;,&#xd;
+						&quot;value&quot;: &quot;&quot;,&#xd;
+						&quot;exist&quot;: &quot;true&quot;,&#xd;
+						&quot;value_time&quot;: &quot;&quot;&#xd;
+					}],&#xd;
+					&quot;family_history&quot;: {&#xd;
+						&quot;existence&quot;: &quot;true&quot;,&#xd;
+						&quot;data&quot;: [{&#xd;
+								&quot;value_name&quot;: &quot;疾病&quot;,&#xd;
+								&quot;value&quot;: &quot;&quot;,&#xd;
+								&quot;exist&quot;: &quot;true&quot;,&#xd;
+								&quot;value_time&quot;: &quot;&quot;&#xd;
+							},&#xd;
+							{&#xd;
+								&quot;value_name&quot;: &quot;症状&quot;,&#xd;
+								&quot;value&quot;: &quot;&quot;,&#xd;
+								&quot;exist&quot;: &quot;true&quot;,&#xd;
+								&quot;value_time&quot;: &quot;&quot;&#xd;
+							}&#xd;
+						]&#xd;
+					},&#xd;
+					&quot;allergy_history&quot;: {&#xd;
+						&quot;existence&quot;: &quot;true&quot;,&#xd;
+						&quot;data&quot;: [{&#xd;
+							&quot;value_name&quot;: &quot;药品&quot;,&#xd;
+							&quot;value&quot;: &quot;&quot;,&#xd;
+							&quot;exist&quot;: &quot;true&quot;,&#xd;
+							&quot;value_time&quot;: &quot;&quot;&#xd;
+						}]&#xd;
+					},&#xd;
+					&quot;surgery_history&quot;: {&#xd;
+						&quot;existence&quot;: &quot;true&quot;,&#xd;
+						&quot;data&quot;: [{&#xd;
+							&quot;value_name&quot;: &quot;手术&quot;,&#xd;
+							&quot;value&quot;: &quot;&quot;,&#xd;
+							&quot;exist&quot;: &quot;true&quot;,&#xd;
+							&quot;value_time&quot;: &quot;&quot;&#xd;
+						}]&#xd;
+					},&#xd;
+					&quot;trauma_history&quot;: {&#xd;
+						&quot;existence&quot;: &quot;true&quot;,&#xd;
+						&quot;data&quot;: [{&#xd;
+							&quot;value_name&quot;: &quot;外伤&quot;,&#xd;
+							&quot;value&quot;: &quot;&quot;,&#xd;
+							&quot;exist&quot;: &quot;true&quot;,&#xd;
+							&quot;value_time&quot;: &quot;&quot;&#xd;
+						}]&#xd;
+					},&#xd;
+					&quot;treatment_history&quot;: {&#xd;
+						&quot;existence&quot;: &quot;true&quot;,&#xd;
+						&quot;data&quot;: [{&#xd;
+							&quot;value_name&quot;: &quot;治疗&quot;,&#xd;
+							&quot;value&quot;: &quot;&quot;,&#xd;
+							&quot;exist&quot;: &quot;true&quot;,&#xd;
+							&quot;value_time&quot;: &quot;&quot;&#xd;
+						}]&#xd;
+					},&#xd;
+					&quot;medication_history&quot;: {&#xd;
+						&quot;existence&quot;: &quot;true&quot;,&#xd;
+						&quot;data&quot;: [{&#xd;
+							&quot;value_name&quot;: &quot;药物&quot;,&#xd;
+							&quot;value&quot;: &quot;&quot;,&#xd;
+							&quot;exist&quot;: &quot;true&quot;,&#xd;
+							&quot;value_time&quot;: &quot;&quot;&#xd;
+						}]&#xd;
+					},&#xd;
+					&quot;menstrual_history&quot;: {&#xd;
+						&quot;existence&quot;: &quot;true&quot;,&#xd;
+						&quot;menarche_age&quot;: &quot;15&quot;,&#xd;
+						&quot;last_menstrual_period&quot;: &quot;20180912&quot;,&#xd;
+						&quot;menstrual_cycle&quot;: &quot;28&quot;,&#xd;
+						&quot;menstrual_days&quot;: &quot;5&quot;,&#xd;
+						&quot;menstrual_value&quot;: &quot;(80,)&quot;,&#xd;
+						&quot;menopause&quot;: &quot;true&quot;&#xd;
+					},&#xd;
+					&quot;childbearing_history&quot;: {&#xd;
+						&quot;existence&quot;: &quot;true&quot;,&#xd;
+						&quot;pregnancy_num&quot;: &quot;1&quot;,&#xd;
+						&quot;delivery_num&quot;: &quot;1&quot;,&#xd;
+						&quot;first_delivery_age&quot;: &quot;23&quot;,&#xd;
+						&quot;pregnancy&quot;: &quot;true&quot;&#xd;
+					},&#xd;
+					&quot;dangerous_history&quot;: {&#xd;
+						&quot;existence&quot;: &quot;true&quot;,&#xd;
+						&quot;data&quot;: [{&#xd;
+							&quot;value_name&quot;: &quot;危险物&quot;,&#xd;
+							&quot;value&quot;: &quot;&quot;,&#xd;
+							&quot;exist&quot;: &quot;true&quot;,&#xd;
+							&quot;value_time&quot;: &quot;&quot;&#xd;
+						}]&#xd;
+					},&#xd;
+					&quot;personal_hobby&quot;: {&#xd;
+						&quot;existence&quot;: &quot;true&quot;,&#xd;
+						&quot;data&quot;: [{&#xd;
+								&quot;value_name&quot;: &quot;个人嗜好&quot;,&#xd;
+								&quot;value&quot;: &quot;&quot;,&#xd;
+								&quot;exist&quot;: &quot;true&quot;,&#xd;
+								&quot;value_time&quot;: &quot;&quot;&#xd;
+							},&#xd;
+							{&#xd;
+								&quot;value_name&quot;: &quot;个人嗜好&quot;,&#xd;
+								&quot;value&quot;: &quot;&quot;,&#xd;
+								&quot;exist&quot;: &quot;true&quot;,&#xd;
+								&quot;value_time&quot;: &quot;&quot;&#xd;
+							}&#xd;
+						]&#xd;
+					}&#xd;
+				}&#xd;
+			},&#xd;
+			&quot;lab_tests&quot;: [{&#xd;
+				&quot;type&quot;: &quot;lab_test&quot;,&#xd;
+				&quot;package_code&quot;: &quot;XCG&quot;,&#xd;
+				&quot;package_name&quot;: &quot;血常规&quot;,&#xd;
+				&quot;sample_type&quot;: &quot;血液&quot;,&#xd;
+				&quot;method&quot;: &quot;沉淀法&quot;,&#xd;
+				&quot;data&quot;: [{&#xd;
+					&quot;item_name&quot;: &quot;白细胞计数&quot;,&#xd;
+					&quot;item_code&quot;: &quot;XCG-001&quot;,&#xd;
+					&quot;value_type&quot;: 0,&#xd;
+					&quot;value_unit&quot;: &quot;×109/L&quot;,&#xd;
+					&quot;values&quot;: [{&#xd;
+						&quot;value&quot;: &quot;白细胞升高&quot;,&#xd;
+						&quot;code&quot;: &quot;000108&quot;,&#xd;
+						&quot;displayname&quot;: &quot;&quot;&#xd;
+					}]&#xd;
+				}]&#xd;
+			}],&#xd;
+			&quot;checks&quot;: [{&#xd;
+				&quot;description&quot;: &quot;1&quot;,&#xd;
+				&quot;type&quot;: &quot;check&quot;,&#xd;
+				&quot;id&quot;: &quot;XBXX&quot;,&#xd;
+				&quot;name&quot;: &quot;胸部X线&quot;,&#xd;
+				&quot;values&quot;: [{&#xd;
+					&quot;value&quot;: &quot;肺纹理增粗&quot;,&#xd;
+					&quot;code&quot;: &quot;000084&quot;,&#xd;
+					&quot;displayname&quot;: &quot;&quot;&#xd;
+				}]&#xd;
+			}]&#xd;
+		},&#xd;
+		&quot;cost_time&quot;: &quot;1467.2851022332907&quot;&#xd;
+	}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">9999</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/decision/api/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">true</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
