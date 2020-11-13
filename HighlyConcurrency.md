@@ -129,3 +129,8 @@ java.util.concurrent ，简称：JUC。一般情况下，大多使用JUC来解�
 CountDownLatch
 
 ![1572394469226](pic\countDownLatch.png)
+
+## Semaphore并发包
+
+使用信号量的方式进行并发时的控制，缺点是阻塞等待。
+
